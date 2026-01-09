@@ -89,42 +89,217 @@
 
     <section id="specs" style="background: rgba(255,255,255,0.02);">
         <div class="container">
-            <h2 class="reveal" style="text-align: center; font-size: 3rem; margin-bottom: 4rem;">Especificações <span
-                    class="gradient-text">Técnicas</span></h2>
+            <h2 class="reveal" style="text-align: center; font-size: 3rem; margin-bottom: 4rem;">Ficha Técnica <span
+                    class="gradient-text">Completa</span></h2>
 
-            <div class="specs-wrapper reveal">
-                <div class="spec-category">
-                    <h3><i class="fas fa-plane"></i> AERONAVE</h3>
-                    <div class="spec-grid">
-                        <div class="spec-item"><span>Peso</span><strong>595 g</strong></div>
-                        <div class="spec-item"><span>Tempo de Voo</span><strong>31 min</strong></div>
-                        <div class="spec-item"><span>Distância Máx</span><strong>18,5 km</strong></div>
-                        <div class="spec-item"><span>Resistência Vento</span><strong>10,7 m/s</strong></div>
-                        <div class="spec-item"><span>Armazenamento</span><strong>8 GB Interno</strong></div>
-                        <div class="spec-item"><span>GNSS</span><strong>GPS+GLONASS+GALILEO</strong></div>
-                    </div>
-                </div>
+            <div class="specs-tabs reveal">
+                <button class="tab-btn active" data-tab="tab-geral">Aeronave</button>
+                <button class="tab-btn" data-tab="tab-camera">Câmera & Gimbal</button>
+                <button class="tab-btn" data-tab="tab-bateria">Bateria & Energia</button>
+                <button class="tab-btn" data-tab="tab-sensores">Transmissão & Sensores</button>
+            </div>
 
-                <div class="spec-category">
-                    <h3><i class="fas fa-camera"></i> CÂMERA</h3>
-                    <div class="spec-grid">
-                        <div class="spec-item"><span>Sensor</span><strong>CMOS de 1"</strong></div>
-                        <div class="spec-item"><span>Pixels</span><strong>20 MP</strong></div>
-                        <div class="spec-item"><span>Resolução Vídeo</span><strong>5.4K / 4K 60fps</strong></div>
-                        <div class="spec-item"><span>Abertura</span><strong>f/2.8</strong></div>
-                        <div class="spec-item"><span>ISO</span><strong>100 - 12800</strong></div>
-                        <div class="spec-item"><span>Bitrate</span><strong>150 Mbps</strong></div>
-                    </div>
-                </div>
-
-                <div class="spec-category" style="grid-column: 1 / -1;">
-                    <h3><i class="fas fa-signal"></i> TRANSMISSÃO E SENSORES</h3>
-                    <div class="spec-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
-                        <div class="spec-item"><span>Sistema</span><strong>DJI O3 (OcuSync 3.0)</strong></div>
-                        <div class="spec-item"><span>Alcance Transmissão</span><strong>Até 12 km (FCC)</strong></div>
-                        <div class="spec-item"><span>Detecção</span><strong>4 Direções (Sup/Inf/Front/Tras)</strong>
+            <div id="tab-geral" class="tab-content active reveal">
+                <div class="specs-grid-full">
+                    <div class="spec-box">
+                        <h4>DIMENSÕES & PESO</h4>
+                        <div class="spec-row">
+                            <div class="spec-label">Peso de decolagem</div>
+                            <div class="spec-value">595 g</div>
                         </div>
-                        <div class="spec-item"><span>Bateria Controle</span><strong>Até 6 horas</strong></div>
+                        <div class="spec-row">
+                            <div class="spec-label">Dimensões (Dobrada)</div>
+                            <div class="spec-value">180×97×77 mm</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Dimensões (Desdobrada)</div>
+                            <div class="spec-value">183×253×77 mm</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Comprimento diagonal</div>
+                            <div class="spec-value">302 mm</div>
+                        </div>
+                    </div>
+                    <div class="spec-box">
+                        <h4>DESEMPENHO DE VOO</h4>
+                        <div class="spec-row">
+                            <div class="spec-label">Tempo máx. de voo</div>
+                            <div class="spec-value">31 minutos</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Velocidade máx. (S)</div>
+                            <div class="spec-value">19 m/s (68 km/h)</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Resistência ao vento</div>
+                            <div class="spec-value">10,7 m/s (38 km/h)</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Teto máx. de serviço</div>
+                            <div class="spec-value">5000 m</div>
+                        </div>
+                    </div>
+                    <div class="spec-box">
+                        <h4>SISTEMAS</h4>
+                        <div class="spec-row">
+                            <div class="spec-label">GNSS</div>
+                            <div class="spec-value">GPS+GLONASS+GALILEO</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Armazenamento interno</div>
+                            <div class="spec-value">8 GB</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Frequências</div>
+                            <div class="spec-value">2,4 GHz / 5,8 GHz</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-camera" class="tab-content reveal">
+                <div class="specs-grid-full">
+                    <div class="spec-box">
+                        <h4>SENSOR CABEÇA</h4>
+                        <div class="spec-row">
+                            <div class="spec-label">Sensor</div>
+                            <div class="spec-value">CMOS de 1”</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Píxeis efetivos</div>
+                            <div class="spec-value">20 MP</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Lente (Equivalente)</div>
+                            <div class="spec-value">22 mm, f/2.8</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">ISO</div>
+                            <div class="spec-value">100-12800 (Manual)</div>
+                        </div>
+                    </div>
+                    <div class="spec-box">
+                        <h4>VÍDEO & FOTO</h4>
+                        <div class="spec-row">
+                            <div class="spec-label">Resolução máx.</div>
+                            <div class="spec-value">5,4K (5472×3078)</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">4K Ultra HD</div>
+                            <div class="spec-value">Até 60 fps</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Bitrate máx.</div>
+                            <div class="spec-value">150 Mbps</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Formatos</div>
+                            <div class="spec-value">MP4/MOV (H.264/H.265)</div>
+                        </div>
+                    </div>
+                    <div class="spec-box">
+                        <h4>ESTABILIZADOR (GIMBAL)</h4>
+                        <div class="spec-row">
+                            <div class="spec-label">Estabilização</div>
+                            <div class="spec-value">Triaxial (Inclinação, Rotação, Giro)</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Alcance controlável</div>
+                            <div class="spec-value">Inclinação: -90° a 0° (padrão)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-bateria" class="tab-content reveal">
+                <div class="specs-grid-full">
+                    <div class="spec-box">
+                        <h4>BATERIA INTELIGENTE</h4>
+                        <div class="spec-row">
+                            <div class="spec-label">Capacidade</div>
+                            <div class="spec-value">3.500 mAh / 3.750 mAh</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Tipo</div>
+                            <div class="spec-value">LiPo 3S</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Energia</div>
+                            <div class="spec-value">40,42 Wh / 41,4 Wh</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Peso</div>
+                            <div class="spec-value">198 g</div>
+                        </div>
+                    </div>
+                    <div class="spec-box">
+                        <h4>CARREGADOR</h4>
+                        <div class="spec-row">
+                            <div class="spec-label">Entrada</div>
+                            <div class="spec-value">100 a 240 V, 50/60 Hz</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Saída</div>
+                            <div class="spec-value">13,2 V, 2,82 A</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Potência nominal</div>
+                            <div class="spec-value">38 W</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-sensores" class="tab-content reveal">
+                <div class="specs-grid-full">
+                    <div class="spec-box">
+                        <h4>SISTEMA DE DETECÇÃO</h4>
+                        <div class="spec-row">
+                            <div class="spec-label">Frontal</div>
+                            <div class="spec-value">0,38 a 23,8 m</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Traseiro</div>
+                            <div class="spec-value">0,37 a 23,4 m</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Inferior / Superior</div>
+                            <div class="spec-value">Funcional</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Luz auxiliar</div>
+                            <div class="spec-value">LED Inferior</div>
+                        </div>
+                    </div>
+                    <div class="spec-box">
+                        <h4>TRANSMISSÃO DE VÍDEO (O3)</h4>
+                        <div class="spec-row">
+                            <div class="spec-label">Distância máx.</div>
+                            <div class="spec-value">12 km (FCC) / 8 km (CE)</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Qualid. Transmissão</div>
+                            <div class="spec-value">1080p / 30fps</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Latência</div>
+                            <div class="spec-value">120 ms</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Sistema</div>
+                            <div class="spec-value">DJI O3</div>
+                        </div>
+                    </div>
+                    <div class="spec-box">
+                        <h4>CONTROLE RC-N1</h4>
+                        <div class="spec-row">
+                            <div class="spec-label">Duração bateria</div>
+                            <div class="spec-value">Até 6 horas</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Conectores</div>
+                            <div class="spec-value">Lightning, Micro USB, USB-C</div>
+                        </div>
                     </div>
                 </div>
             </div>

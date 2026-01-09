@@ -42,6 +42,24 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Tab Switching Logic for Specs
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
+
+if (tabBtns) {
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const tabId = btn.getAttribute('data-tab');
+
+            tabBtns.forEach(b => b.classList.remove('active'));
+            tabContents.forEach(c => c.classList.remove('active'));
+
+            btn.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        });
+    });
+}
+
 // Mobile Menu Toggle
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
@@ -50,16 +68,18 @@ if (navToggle) {
     navToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
         const icon = navToggle.querySelector('i');
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-times');
+        if (icon) {
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        }
     });
 }
 
 // Close mobile menu on link click
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        const icon = navToggle.querySelector('i');
+        if (navLinks) navLinks.classList.remove('active');
+        const icon = navToggle ? navToggle.querySelector('i') : null;
         if (icon) {
             icon.classList.add('fa-bars');
             icon.classList.remove('fa-times');
